@@ -1,0 +1,28 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube to MP3</title>
+    <style>
+      body { font-family: Arial; text-align: center; margin-top: 50px; }
+      input { width: 60%; padding: 10px; font-size: 16px; }
+      button { padding: 10px 20px; font-size: 16px; margin-left: 10px; }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube to MP3 Converter</h1>
+    <input id="url" type="text" placeholder="Paste YouTube link here" />
+    <button onclick="convert()">Download MP3</button>
+
+    <script>
+      function convert() {
+        const url = document.getElementById("url").value;
+        if (!url.trim()) {
+          alert("Please paste a valid YouTube link.");
+          return;
+        }
+        window.location.href = `/download?url=${encodeURIComponent(url)}`;
+      }
+    </script>
+  </body>
+</html>
