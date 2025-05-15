@@ -2,3 +2,4 @@ node_modules
 *.mp3
 cookies.txt
 cookies/cookies.txt
+/cookies
